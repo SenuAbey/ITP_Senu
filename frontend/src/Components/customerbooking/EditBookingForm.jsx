@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; // Import Axios
 //import "../App.css";
 import "../../App.css";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const EditBookingForm = ({ bookingId, onCancel }) => {
   const { id } = useParams(); // Get booking ID from URL
@@ -21,7 +21,7 @@ const EditBookingForm = ({ bookingId, onCancel }) => {
 
   const navigate = useNavigate(); // Initialize navigate
   const [errors, setErrors] = useState({});
-  const [chosenVehicle, setChosenVehicle] = useState({
+  const [chosenVehicle] = useState({
     name: "Toyota Corolla",
     image:
       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

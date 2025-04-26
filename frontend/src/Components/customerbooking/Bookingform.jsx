@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './bookingForm.css';
 
 const Bookingform = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,13 @@ const Bookingform = () => {
       formData.needsDriver
     );
     setFormData((prev) => ({ ...prev, totalAmount }));
-  }, [formData.vehicleType, formData.rentalDuration.type, formData.rentalDuration.value, formData.needsDriver]);
+  }, [
+    formData.vehicleType,
+    formData.rentalDuration.type,
+    formData.rentalDuration.value,
+    formData.needsDriver,
+    calculateTotalAmount,  // Added here to fix the warning
+  ]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;

@@ -1,0 +1,100 @@
+/* Global styles for the navigation bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #1c2b36; /* Dark blue background */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  body .nav {
+    background-color: #1c2b36; /* Dark blue background */
+}
+  
+  /* Left side with the title */
+  .left h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* Right side for navigation links */
+  .right {
+    display: flex;
+    gap: 30px; /* Space between each link */
+  }
+  
+  /* Style for navigation links */
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover {
+    color: #007bff; /* Light blue color on hover */
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Adding a subtle underline animation on hover */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007bff; /* Underline color */
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Style for the system name */
+  .system {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+  }
+  
+  /* Add responsiveness for mobile view */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .right {
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+    }
+  
+    .nav-link {
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      border-top: 1px solid #3a4c62; /* Border between each link */
+    }
+  
+    .nav-link:hover {
+      background-color: #2b3a47; /* Darker background on hover for mobile */
+      color: #007bff;
+    }
+  }
+
