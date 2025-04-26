@@ -1,0 +1,21 @@
+.kl {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  border-bottom: 1px solid #cfcaca;
+}
+
+.main_titles {
+  font-family: "poppins", sans-serif;
+  color: #333;
+  font-size: 25px !important;
+}
+
+.add {
+  width: 50px;
+}
+.add_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
