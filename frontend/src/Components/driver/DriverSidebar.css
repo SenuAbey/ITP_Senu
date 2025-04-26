@@ -1,0 +1,51 @@
+.driver-sidebar {
+    width: 250px;
+    height: 350vh;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar section headers */
+  .driver-sidebar .sidebar-section {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #83c1d2;
+  }
+  
+  /* Sidebar list */
+  .driver-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Sidebar links */
+  .driver-sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  /* Active link */
+  .driver-sidebar a:hover,
+  .driver-sidebar .active-link {
+    background-color: #1abc9c;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  

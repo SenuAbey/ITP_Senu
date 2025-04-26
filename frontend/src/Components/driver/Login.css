@@ -1,0 +1,96 @@
+/* Login.css */
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2c3e50 50%, #f3f4f6 50%);
+    gap: 1.5rem; /* Equivalent to Tailwind's space-y-6 */
+}
+
+.header-section {
+    font-family: "Sevillana", cursive; /* You need to import the Sevillana font */
+    font-size: 1.875rem; /* Tailwind's text-3xl */
+    color: #ffffff; /* White text */
+}
+
+.header-section h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.login-card {
+    border: 1px solid #e5e7eb; /* Light gray border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1.5rem; /* 6 * 0.25rem = 1.5rem */
+    width: 20rem; /* 80 * 0.25rem = 20rem */
+    background-color: #ffffff; /* White background */
+    border-radius: 0.5rem; /* Optional for a rounded card */
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem 0.75rem; /* 2 * 0.25rem = 0.5rem, 3 * 0.25rem = 0.75rem */
+    border: 1px solid #e5e7eb; /* Light gray border */
+    border-radius: 0.375rem; /* Tailwind's rounded-md */
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2c3e50;
+  background-color: #fff;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+
+.login-button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #15406a !important; /* Force the color */
+  color: white !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #26547f !important;
+}

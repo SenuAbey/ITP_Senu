@@ -1,0 +1,135 @@
+.dashboard-content {
+  margin-left: 270px;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.welcome-heading {
+  margin-top: 30px; 
+  margin-bottom: 40px; /* You can adjust this value */
+}
+
+
+.dashboard-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.status-box {
+  margin-top: 20px;
+  width: 28%;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.status-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.status-box p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1abc9c;
+}
+.dashboard-overview {
+  flex: 2;
+}
+
+.dashboard-box-container {
+  display: flex;
+  gap: 20px;
+}
+
+
+.section-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.dashboard-box {
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-box:hover {
+  transform: translateY(-5px); 
+}
+
+.dashboard-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.dashboard-box p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+
+.driver-details-box {
+  flex: 1;
+  padding: 40px;
+  background-color: #ecf0f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  text-align-last: left;
+  margin-bottom: 40px;
+}
+
+.driver-details-box h2 {
+  font-size: 22px;
+  color: #476d9b;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  font-style:bold;
+}
+
+.driver-details-box p {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 10px 0;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+  }
+
+  .dashboard-box-container {
+    flex-direction: column;
+  }
+
+  .driver-details-box {
+    width: 100%;
+  }
+}
+
+.status-box select {
+  padding: 6px 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+

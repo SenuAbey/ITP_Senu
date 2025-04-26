@@ -1,0 +1,84 @@
+.manage-trips-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  }
+  
+  .manage-trips-container h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+  }
+  
+  .assigned-bookings {
+    margin-top: 30px;
+  }
+  
+  .assigned-bookings h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  .booking-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .booking-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .booking-card:hover {
+    transform: scale(1.01);
+  }
+  
+  .booking-card p {
+    margin: 6px 0;
+    color: #2c3e50;
+    font-size: 0.95rem;
+  }
+  
+  .status-buttons {
+    margin-top: 15px;
+  }
+  
+  .status-buttons button {
+    margin-right: 10px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #2980b9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .status-buttons button:hover:not(:disabled) {
+    background-color: #1c5980;
+  }
+  
+  .status-buttons button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+
+  .completed-bookings {
+    margin-top: 40px;
+  }
+  
+  

@@ -1,0 +1,65 @@
+/* Dashboard Content Styles */
+.dashboard-content {
+  margin-left: 270px; /* Adjust according to sidebar width */
+  margin-top: 60px; /* Adjust according to top bar height */
+  padding: 20px;
+}
+
+.dashboard-section {
+  margin-top: 30px;
+}
+
+.dashboard-section h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.dashboard-box-container {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-box {
+  width: 200px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-box:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+.dashboard-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.dashboard-box p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+.dashboard-box p {
+  font-size: 20px;
+}
+
+/* Optional: Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-box-container {
+    flex-direction: column;
+  }
+  .dashboard-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

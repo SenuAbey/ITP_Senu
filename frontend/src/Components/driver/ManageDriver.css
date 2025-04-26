@@ -1,0 +1,93 @@
+.driver-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.driver-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.driver-table th, .driver-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.driver-table th {
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.driver-table tr:hover {
+    background: #f1f1f1;
+}
+
+.updaten-button, .delete-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.updaten-button {
+    background: #28a745;
+    color: white;
+    margin-right: 5px;
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+}
+
+.updaten-button:hover {
+    background: #218838;
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+.generate-report-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.generate-report-button:hover {
+    background-color: #0056b3;
+}

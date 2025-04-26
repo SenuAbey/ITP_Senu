@@ -1,0 +1,24 @@
+.registration-container {
+  padding: 20px;
+}
+
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registration-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

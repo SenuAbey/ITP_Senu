@@ -1,0 +1,134 @@
+/* Sidebar container */
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling if content exceeds the view */
+  transition: all 0.3s ease;
+}
+
+/* Sidebar title */
+.admin-sidebar h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #ecf0f1;
+  font-weight: bold;
+  letter-spacing: normal; /* Remove letter spacing */
+  padding-bottom: 15px;
+  border-bottom: 2px solid #34495e; /* Adds a subtle divider */
+}
+
+/* Sidebar list styles */
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar list item style */
+.admin-sidebar li {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  word-spacing: normal; /* Remove space between words */
+}
+
+/* Highlight on hover */
+.admin-sidebar li:hover {
+  background-color: #34495e;
+  cursor: pointer;
+}
+
+/* Styling for section titles */
+.admin-sidebar .sidebar-section {
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #34495e;
+  border-radius: 5px;
+  font-size: 18px;
+  word-spacing: normal; /* Remove space between words */
+  letter-spacing: normal; /* Remove letter spacing */
+  color: #83c1d2;
+  margin-bottom: 5px;
+}
+
+/* Styling for submenu */
+.submenu {
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 0; /* Remove margin at the bottom of the submenu */
+}
+
+/* Styling for submenu items */
+.submenu li {
+  padding: 4px 12px; /* Reduced padding */
+  margin: 2px 0; /* Reduced margin */
+  font-size: 13px; /* Slightly smaller font */
+  word-spacing: normal; /* Remove space between words */
+}
+
+/* Nav links styling */
+.admin-sidebar a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  word-spacing: normal; /* Remove space between words */
+}
+
+/* Active and hover states for nav links */
+.admin-sidebar a:hover,
+.admin-sidebar .active-link {
+  background-color: #1abc9c;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Add a nice gradient effect on hover for submenu items */
+.submenu li:hover {
+  background: #16a085;
+  border-radius: 5px;
+}
+
+/* Reduce padding for smaller screens to compact further */
+@media (max-height: 700px) {
+  .admin-sidebar {
+    height: auto;
+  }
+
+  .admin-sidebar h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .admin-sidebar .sidebar-section {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .admin-sidebar li {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .admin-sidebar a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .submenu li {
+    font-size: 12px; /* Smaller font size for small screens */
+  }
+}

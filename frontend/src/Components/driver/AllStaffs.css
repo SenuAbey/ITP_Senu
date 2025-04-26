@@ -1,0 +1,109 @@
+/* Container */
+.driver-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 40%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Table */
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.driver-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+.driver-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Table Cells */
+.driver-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Alternate Row Colors */
+.driver-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Approve/Reject Buttons */
+.approve-button, .reject-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.approve-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.approve-button:hover {
+    background-color: #45a049;
+}
+
+.reject-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.reject-button:hover {
+    background-color: #e53935;
+}
+

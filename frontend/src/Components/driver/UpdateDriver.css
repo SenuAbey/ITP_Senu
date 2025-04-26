@@ -1,0 +1,59 @@
+.update-driver-form {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px 40px;
+    background-color: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .update-driver-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+  
+  .update-driver-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-driver-form label {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #34495e;
+  }
+  
+  .update-driver-form input {
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+    transition: border 0.3s;
+  }
+  
+  .update-driver-form input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  .update-driver-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .update-driver-form button:hover {
+    background-color: #2980b9;
+  }
+  
