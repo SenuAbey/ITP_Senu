@@ -1,0 +1,315 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Font Faces for custom fonts */
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/lato.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "made";
+  src: url("../fonts/made.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Style */
+.form-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #252525;
+  font-family: "made";
+  font-weight: 300;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.form-title:hover {
+  color: #007bff;
+}
+
+/* Left Column for Vehicle Info */
+.left-column {
+  flex: 1;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.left-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #007bff;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Right Column for Form */
+.right-column {
+  flex: 2;
+  padding: 20px;
+  position: relative;
+}
+
+/* Vehicle Image */
+.vehicle-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sub Title for Vehicle */
+.sub_title {
+  font-size: 20px;
+  font-family: "lato";
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Flex for space-between */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateY(-5px);
+}
+
+/* Form Label */
+.form-label {
+  font-family: "lato";
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  font-family: "lato";
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Rental Duration Group */
+.duration-group {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+select {
+  outline: none;
+}
+
+.hint-text {
+  color: red;
+  font-size: 12px;
+  font-family: "lato";
+  display: flex;
+  align-items: center;
+}
+
+/* Terms and Conditions Section */
+.terms-and-conditions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.terms-and-conditions h3 {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.terms-and-conditions p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.terms-and-conditions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.terms-and-conditions li {
+  font-size: 14px;
+  color: #555;
+}
+
+.terms-and-conditions label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+input[type="checkbox"].form-checkbox {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  .form-title {
+    font-size: 32px;
+  }
+
+  .vehicle-image {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .terms-and-conditions {
+    margin-top: 20px;
+  }
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
