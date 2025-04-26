@@ -44,14 +44,14 @@ mongoose.connect("mongodb+srv://Wathsala:Wath123@cluster0.lb1gs.mongodb.net/staf
   .catch((err) => console.log(err));
 
 // Route imports and use
-const ticketRoutes = require('./Route/ticketRoutes');
-const customerRoutes = require('./Route/customerRoutes');
+const ticketRoutes = require('./Route/ticketRoutes.js');
+
 
 app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/tickets', ticketRoutes);
-app.use('/api/customers', customerRoutes);
+
 
 // Test route to check server
 app.use("/", (req, res, next) => {
