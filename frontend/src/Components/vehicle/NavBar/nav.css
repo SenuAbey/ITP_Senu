@@ -11,6 +11,10 @@
     top: 0;
     z-index: 1000;
   }
+
+  body .nav {
+    background-color: #1c2b36; /* Dark blue background */
+}
   
   /* Left side with the title */
   .left h2 {

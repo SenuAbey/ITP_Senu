@@ -11,10 +11,10 @@ const Nav = () => {
         </Link>
       </div>
       <div className="right">
-        <Link to="/dashboard" className="nav-link">Dashboard</Link>
+        <Link to="/customerVehicleDetails" className="nav-link">Dashboard</Link>
         <Link to="/bookings" className="nav-link">My Bookings</Link>
-        <Link to="/customer-support" className="nav-link">Customer Support</Link>
-        <Link to="/about-us" className="nav-link">About Us</Link>
+        <Link to="/ticketCustomer" className="nav-link">Customer Support</Link>
+        <Link to="/driver-mgt" className="nav-link">Driver Management</Link>
       </div>
     </div>
   );
