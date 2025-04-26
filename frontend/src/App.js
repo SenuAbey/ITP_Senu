@@ -9,6 +9,9 @@ import UpdateVehicle from "./Components/vehicle/UpdateVehicle/UpdateVehicle";
 import CustomerVehicleDetails from "./Components/vehicle/VehicleDetails/CustomerVehicleDetails";
 import TicketAdmin from './Components/tickets/ticketAdmin';
 import TicketCustomer from './Components/tickets/ticketCustomer.js';
+import BookingTable from "./Components/customerbooking/BookingTable";
+import Bookingform from "./Components/customerbooking/Bookingform";
+import EditBookingForm from "./Components/customerbooking/EditBookingForm";
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
           <Route path = "/customerVehicleDetails" element={<CustomerVehicleDetails/>}/>
           <Route path = "/ticketCustomer" element ={<TicketCustomer/>}/>
           <Route path = "/ticketAdmin" element ={<TicketAdmin/>}/>
+          <Route path="/bookings" element={<BookingTable />} />
+          <Route path="/edit-booking/:id" element={<EditBookingForm />} />
+          <Route path="/Bookingform" element={<Bookingform />} />
+          
 
         </Routes>
       </React.Fragment>

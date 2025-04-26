@@ -38,7 +38,7 @@ function CustomerVehicles({vehicle = {}}) {
       <h1>Vehicle Status : {vehicleStatus}</h1>
       <h1>Vehicle Mileage : {vehicleMileage}</h1>
 
-      <Link to ="" className="vehicle-book-link">
+      <Link to ="/Bookingform" className="vehicle-book-link">
       Book Now</Link>
       
 
