@@ -1,5 +1,5 @@
 const express = require('express');
-const bookingController = require('../controllers/bookingController'); // Imports the controller that contains the logic for handling booking-related operations.
+const bookingController = require('../Controlers/bookingController'); // Imports the controller that contains the logic for handling booking-related operations.
 
 const router = express.Router(); // Creates an instance of the Express router
 
