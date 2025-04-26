@@ -1,0 +1,49 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar container (blue background for navbar only) */
+.navbar {
+    width: 100%;
+    background-color: #0a1f44; /* Dark blue background */
+    padding: 12px 0;
+}
+
+/* Style for the list */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align the items to the left */
+}
+
+/* Style for each list item (make it a box and add space between them) */
+.navbar ul li {
+    margin-right: 20px;
+    padding: 10px 20px; /* Add padding to create space inside the box */
+    background-color: #0a1f44; /* Same blue color as navbar */
+    border: 2px solid white; /* White border around each box */
+    border-radius: 5px; /* Optional: Rounded corners for a softer look */
+}
+
+/* Link style (inside each box) */
+.navbar ul li h1{
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover effect for links (change color to yellow on hover) */
+.navbar ul li a:hover {
+    color: #ffcc00; /* Yellow color on hover */
+}
+
+.navbar h1{
+    color: white;
+}

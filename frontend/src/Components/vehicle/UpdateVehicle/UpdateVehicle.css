@@ -1,0 +1,95 @@
+/* General background color for the whole screen */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the form and apply background and padding */
+.update-vehicle-form {
+    background-color: #f0f0f0; /* Ash background color */
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the title */
+.update-vehicle-form h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style for the labels */
+.update-vehicle-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input field styles */
+.update-vehicle-form input[type="text"],
+.update-vehicle-form input[type="number"],
+.update-vehicle-form select  {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Submit button style */
+.update-vehicle-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f306b; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.update-vehicle-form button:hover {
+    background-color: #16469c; 
+}
+
+/* Style for the select dropdowns */
+.update-vehicle-form select {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Focus effect for input fields */
+.update-vehicle-form input:focus,
+.update-vehicle-form select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.2);
+}
+
+/* Style for file input */
+.update-vehicle-form input[type="file"] {
+    padding: 6px 10px;
+    margin-bottom: 16px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the image preview */
+.update-vehicle-form img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+

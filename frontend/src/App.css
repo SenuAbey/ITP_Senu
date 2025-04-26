@@ -1,0 +1,7 @@
+/* Ensures everything below the navbar has a white background */
+.App {
+    background-color: white;
+    min-height: 100vh; /* Ensures the white background covers the full page */
+    padding-top: 20px; /* Adds space between navbar and content */
+    text-align: center;
+}

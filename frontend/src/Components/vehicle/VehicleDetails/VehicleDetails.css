@@ -1,0 +1,249 @@
+/* General background color for the screen */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Vehicle Details Page Title */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Container for all vehicle cards */
+.vehicle-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per line */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto;
+}
+
+/* Individual vehicle card container */
+.vehicle-card-wrapper {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.vehicle-card-wrapper:hover {
+    transform: scale(1.05); /* Slight hover effect to scale the card */
+}
+
+/* Styling for no vehicle message */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+}
+
+/* Styling for the update and delete buttons */
+.vehicle-card-wrapper button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 100%; /* Full width for buttons */
+}
+
+.update-button {
+    background-color: #c2a71f; /* Yellow */
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #e1b40f; /* Darker yellow on hover */
+}
+
+.delete-button {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Style for the Download Report button */
+#download-report-btn {
+    background-color: #6c219c; /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Button hover effect */
+  #download-report-btn:hover {
+    background-color: #4f1375; /* Darker green on hover */
+  }
+  
+  /* Button active effect */
+  #download-report-btn:active {
+    background-color: #7923b0; /* Even darker green when clicked */
+  }
+
+  /* Unique style for the search input */
+#vehicle-search {
+    width: 280px;
+    padding: 12px;
+    border: 2px solid #3283a8;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+  }
+  
+  #vehicle-search:focus {
+    border-color: #3283a8;
+    box-shadow: 0 0 6px rgba(56, 142, 60, 0.5);
+    background-color: #ffffff;
+  }
+  
+  /* Unique style for the search button */
+  #search-btn {
+    padding: 12px 18px;
+    margin-left: 12px;
+    background-color: #47a2cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  #search-btn:hover {
+    background-color: #1b7eab;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    #vehicle-search {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    #search-btn {
+      width: 100%;
+    }
+  }
+
+#add-vehicle-link {
+    display: inline-block;           /* Keeps it inline with other elements */
+    background-color: #4CAF50;       /* Green background */
+    color: white;                    /* White text */
+    padding: 10px 20px;              /* Padding to make it look like a button */
+    text-decoration: none;           /* Remove the underline */
+    font-size: 16px;                 /* Font size */
+    border-radius: 5px;              /* Rounded corners */
+    text-align: center;              /* Center the text inside the link */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+}
+
+
+#add-vehicle-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* Container for sorting controls */
+.sort-controls {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dropdown styling */
+.sort-controls select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #555; /* Gray text */
+  transition: border 0.2s ease;
+}
+
+.sort-controls select:focus {
+  border-color: #484ec7;
+  outline: none;
+}
+
+/* Sort button styling */
+.sort-controls button {
+  padding: 7px 15px;
+  background-color: #484ec7;
+  border: none;
+  color: #ffffff; 
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sort-controls button:hover {
+  background-color: #3a42a8; /* slightly darker hover color */
+}
+
+.new-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.vehicle-card {
+  position: relative;
+  /* Ensure the card has a relative position to place the label above it */
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-new-vehicles-btn {
+  background-color: green; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  font-weight: 10; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.show-new-vehicles-btn:hover {
+  background-color: darkgreen;
+}
+
+.show-new-vehicles-btn:active {
+  background-color: forestgreen; 
+}
