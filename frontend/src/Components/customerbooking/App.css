@@ -180,7 +180,7 @@ input[type="checkbox"] {
 /* Button Styling */
 button {
   padding: 12px 20px;
-  background-color: #007bff;
+  background-color: #1a3f44;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -190,7 +190,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #1b5b64;
   transform: translateY(-2px);
 }
 

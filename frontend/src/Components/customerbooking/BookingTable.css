@@ -90,3 +90,14 @@
   color: #777;
   font-style: italic;
 }
+
+
+.download-pdf-button{
+  background-color: #1a3f44;
+
+}
+
+.download-pdf-button:hover{
+  background-color: #2c7882;
+
+}

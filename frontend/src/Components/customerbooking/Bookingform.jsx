@@ -156,7 +156,7 @@ const Bookingform = () => {
   };
 
   return (
-    <div className="container">
+    <div className="bookingcontainer">
       <div className="right-column">
         <h2 className="form-title">Customer Booking Form</h2>
         <form onSubmit={handleSubmit} className="booking-form">
