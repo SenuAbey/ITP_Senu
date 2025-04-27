@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";  // Import useState and useEffect
 import axios from "axios";  // Import axios
 import AdminSidebar from "./AdminSidebar";
-import AdminNavbar from "./AdminNavbar";
+//import AdminNavbar from "./AdminNavbar";
 import "./AdminDashboard.css";
-import BookVehicle from "./BookVehicle";
+//import BookVehicle from "./BookVehicle";
 
 const AdminDashboard = () => {
   const [totalStaffs, setTotalStaffs] = useState(0);

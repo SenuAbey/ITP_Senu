@@ -32,7 +32,7 @@ const Login = ({ onLoginSuccess }) => {
         } else if (response.data.role === "DRIVER") {
           navigate(`/driver-dashboard/${response.data.username}`);
         } else if (response.data.role === "CUSTOMER") {
-          navigate(`/customer-dashboard/${response.data.username}`);
+          navigate(`/customerVehicleDetails/${response.data.username}`);
         }
       } else {
         console.error("Role is missing in API response");
