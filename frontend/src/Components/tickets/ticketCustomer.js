@@ -159,7 +159,7 @@ function TicketCustomer() {
           required
         />
 
-        <button className= "download-pdf-button" type="submit">Submit</button>
+        <button style={{ backgroundColor: "#1a3f44", color: "white" }} className= "download-pdf-button" type="submit">Submit</button>
       </form>
 
       <hr height="3px" />
@@ -175,14 +175,14 @@ function TicketCustomer() {
   <div className="ticket-list">
     {tickets.map(ticket => (
       <div className="ticket-card" key={ticket._id}>
-        <p><strong>Category:</strong> {ticket.category}</p>
-        <p><strong>Type:</strong> {ticket.type}</p>
+        <p style={{ textAlign: "left" }}><strong>Category:</strong> {ticket.category}</p>
+        <p style={{ textAlign: "left" }}><strong>Type:</strong> {ticket.type}</p>
         {ticket.bookingId && (
-          <p><strong>Booking ID:</strong> {ticket.bookingId}</p>
+          <p style={{ textAlign: "left" }}><strong>Booking ID:</strong> {ticket.bookingId}</p>
         )}
-        <p><strong>Description:</strong> {ticket.description}</p>
-        <p><strong>Status:</strong> {ticket.status}</p>
-        <p><strong>Admin Reply:</strong> {ticket.reply || "No reply yet"}</p>
+        <p style={{ textAlign: "left" }}><strong>Description:</strong> {ticket.description}</p>
+        <p style={{ textAlign: "left" }}><strong>Status:</strong> {ticket.status}</p>
+        <p style={{ textAlign: "left" }}><strong>Admin Reply:</strong> {ticket.reply || "No reply yet"}</p>
       </div>
     ))}
   </div>

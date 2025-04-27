@@ -82,7 +82,7 @@ const DriverDashboard = () => {
 
   return (
     <div className="driver-dashboard">
-      <DriverNavbar />
+      {/*<DriverNavbar/>*/}
       <DriverSidebar />
       <div className="dashboard-content">
           <div className="welcome-heading">

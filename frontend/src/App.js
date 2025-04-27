@@ -4,6 +4,7 @@ import './App.css';
 import HomeVehicle from "./Components/vehicle/HomeVehicles/HomeVehicles";
 import NavBar from "./Components/vehicle/NavBar/Nav";
 import AdminNavBar from "./Components/vehicle/NavBar/AdminNav.js";
+import DriverNavBar from "./Components/driver/DriverNavbar.js";
 import AddVehicles from "./Components/vehicle/AddVehicles/AddVehicles";
 import VehicleDetails from "./Components/vehicle/VehicleDetails/VehicleDetails";
 import UpdateVehicle from "./Components/vehicle/UpdateVehicle/UpdateVehicle";
@@ -48,6 +49,8 @@ function App() {
   const renderNavBar = () => {
     if (role === "ADMIN") {
       return <AdminNavBar />;
+    }else if (role === "DRIVER") {
+      return <DriverNavBar />;
     }
     return <NavBar />;
   };

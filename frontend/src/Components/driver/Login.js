@@ -50,7 +50,7 @@ const Login = ({ onLoginSuccess }) => {
   return (
     <div className="login-container">
       <div className="header-section">
-        <h1>Driver Management</h1>
+        <h1>User Login</h1>
       </div>
       <div className="login-card">
         <h2>Login</h2>

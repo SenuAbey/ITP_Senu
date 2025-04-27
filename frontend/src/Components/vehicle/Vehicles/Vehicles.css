@@ -30,7 +30,6 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
     transition: transform 0.2s ease-in-out;
     max-width: 350px;
     margin: 10px auto;
@@ -56,37 +55,43 @@ h1 {
     font-size: 16px;
     color: #333;
     margin: 5px 0;
-    /* text-align: left; */
+}
+
+/* Center the update and delete buttons */
+.vehicle-card .button-group {
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Styling for the update and delete buttons */
-.vehicle-card .update-link {
+.vehicle-card .update-link,
+.vehicle-card .delete-button {
     display: inline-block;
     padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+/* Specific styles for update link */
+.vehicle-card .update-link {
     background-color: #f1c40f; /* Yellow */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin: 10px 0;
-    width: 50%;
-    text-align: center;
-    font-size: 14px;
 }
 
 .vehicle-card .update-link:hover {
     background-color: #e1b40f; /* Darker yellow on hover */
 }
 
+/* Specific styles for delete button */
 .vehicle-card .delete-button {
-    padding: 10px 15px;
     background-color: #e74c3c; /* Red */
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    width: 50%;
-    margin-top: 10px;
 }
 
 .vehicle-card .delete-button:hover {
@@ -95,7 +100,7 @@ h1 {
 
 /* Centered vehicle booking link */
 .vehicle-book-link {
-    display: block; /* changed to block to allow auto margins */
+    display: block;
     background-color: mediumblue;
     color: white;
     padding: 10px 20px;
@@ -106,10 +111,10 @@ h1 {
     transition: background 0.3s, transform 0.2s;
     width: 200px;
     text-align: center;
-    margin: 10px auto 0 auto; /* center horizontally */
+    margin: 10px auto 0 auto;
 }
 
 .vehicle-book-link:hover {
-    background-color: #0000cd; /* Darker blue on hover */
+    background-color: #0000cd;
     transform: scale(1.05);
 }

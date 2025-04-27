@@ -9,7 +9,7 @@ const dotenv = require("dotenv");
 // Routers
 const vehicleRouter = require("./Route/VehicleRoute.js");
 const ticketRoutes = require('./Route/ticketRoutes.js');
-const bookingRoutes = require("./Route/bookingRoutes");
+const bookingRoutes = require("./Route/bookingRoutes.js");
 
 const staffRouter = require("./Route/staffs.js");
 const userRouter = require("./Route/users.js");

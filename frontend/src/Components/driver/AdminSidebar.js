@@ -34,11 +34,7 @@ const AdminSidebar = () => {
               Assign Drivers
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/track-rides" activeClassName="active-link">
-              Track Rides
-            </NavLink>
-          </li>
+          
         </ul>
 
         <li className="sidebar-section">Availability</li>
@@ -48,22 +44,9 @@ const AdminSidebar = () => {
               Set Availability
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/register" activeClassName="active-link">
-              Register
-            </NavLink>
-          </li>
+          
         </ul>
-
-        <li className="sidebar-section">Reports</li>
-        <ul className="submenu">
-        <li>
-           <NavLink to="/book-vehicle" activeClassName="active-link">
-              Book Vehicle
-            </NavLink> 
-          </li>
-        </ul>
-       
+      
       </ul>
     </div>
   );

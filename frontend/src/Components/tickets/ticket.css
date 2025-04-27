@@ -1,24 +1,19 @@
+/* General Ticket Form Styling */
 .ticketForm {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 20px auto;
+  background: #ffffff;
 }
 
-.ticketFormContainer {
-  width: 400px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
-.cusTicket h2 {
+.cusTicket h2,
+.manage_tickets h2 {
   text-align: center;
-  font-size: 24px;
-  color: black;
+  font-size: 26px;
+  color: #1a3f44;
   margin-bottom: 20px;
 }
 
@@ -31,7 +26,8 @@
 }
 
 .ticketForm input,
-.ticketForm textarea,.ticketForm select {
+.ticketForm textarea,
+.ticketForm select {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -39,21 +35,26 @@
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #e9f0f3;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .ticketForm input:focus,
 .ticketForm textarea:focus,
-.ticketForm select:focus{
+.ticketForm select:focus {
   border-color: #1a3f44;
   outline: none;
 }
 
-
-.download-pdf-button{
-  background-color: #1a3f44;
-
+.ticketForm input[type="text"] {
+  height: 40px;
 }
+
+.ticketForm textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Submit Button */
 .ticketForm button {
   background-color: #1a3f44;
   color: white;
@@ -61,6 +62,7 @@
   border: none;
   border-radius: 6px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 100%;
@@ -71,42 +73,12 @@
   background-color: #15514d;
   transform: scale(1.05);
 }
-.ticketForm input[type="text"] {
-  height: 40px;
-}
 
-.ticketForm textarea {
-  height: 150px;
-  resize: none;
-}
-
-.cusTicket select {
-  height: 40px;
-  background-color: #e9f0f3;
-}
-
-.manage_tickets{
-  margin-left: 30px;
-
-}
-.ticket-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  flex-wrap: wrap;
-  gap: 50px;
-  padding: 20px;
-  margin: 30px 30px;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
-
+/* Ticket Cards */
 .ticket-list {
-  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
-  justify-content: center;
 }
 
 .ticket-card {
@@ -116,8 +88,9 @@
   color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 300px;
+  width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .ticket-card:hover {
@@ -125,14 +98,13 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.ticket-card list{
+  width: 100%;
+}
 .ticket-card p {
-  margin: 10px 0;
+  margin: 8px 0;
   font-size: 14px;
   color: #333;
-}
-
-.ticket-card strong {
-  color: #555;
 }
 
 .ticket-card h3 {
@@ -140,88 +112,33 @@
   color: #333;
 }
 
-.manage_tickets select {
-  height: 40px;
-  background-color: #e9f0f3;
-  width: 300px; 
-  font-size: 14px;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  margin-right: 50px;
-}
-
 .ticket-card.high {
-  background-color: #ffcccb; 
+  background-color: #ffcccb;
   border-left: 5px solid red;
 }
 
 .ticket-card.medium {
-  background-color: #fff5cc; 
+  background-color: #fff5cc;
   border-left: 5px solid orange;
 }
 
 .ticket-card.low {
-  background-color: #d4fcd4; 
+  background-color: #d4fcd4;
   border-left: 5px solid green;
 }
 
-.admin-actions button {
-  margin-right: 10px;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
+/* Admin Actions */
+.manage_tickets {
+  margin: 30px;
 }
 
-.update-btn {
-  background-color: gold;
-  width: 100%;
-  color: black;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;  
-  margin-top: 1px;
-  margin-bottom: 5px;
+.ticket-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
 }
 
-.delete-btn {
-  background-color: rgb(198, 15, 15);
-  width: 100%;  
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.reply-btn {
-  background-color: rgb(28, 103, 165);
-  width: 100%;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 1px;
-}
-
-.update-btn:hover {
-  background-color: rgb(179, 179, 81);;
-}
-
-.delete-btn:hover {
-  background-color: rgb(223, 98, 98);
-}
-
-.reply-btn:hover {
-  background-color: rgb(69, 69, 147);
-}
-
-.ticketReply{
-  width: 100%;
-}
 .admin-reply {
   background-color: #f0f0f0;
   padding: 10px;
@@ -229,24 +146,92 @@
   border-radius: 5px;
 }
 
-.ticketPdf{
-  background-color:#15514d; 
-  color: white;
-  padding: 10px 20px;
+/* Buttons: Update, Delete, Reply */
+.update-btn,
+.delete-btn,
+.reply-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
   border: none;
-  width: 200px;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.update-btn {
+  background-color: gold;
+  color: black;
+}
+
+.update-btn:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: crimson;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e06666;
+  transform: translateY(-2px);
+}
+
+.reply-btn {
+  background-color: #1c67a5;
+  color: white;
+}
+
+.reply-btn:hover {
+  background-color: #12497c;
+  transform: translateY(-2px);
+}
+
+/* Filters */
+.filters {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
   justify-content: center;
 }
 
-.ticketpdf-wrapper{
+.filters select {
+  height: 40px;
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #e9f0f3;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* PDF Download Button */
+.pdf-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px; 
+  margin: 20px 0;
+}
+
+.pdf {
+  background-color: #1a3f44;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pdf:hover {
+  background-color: #0e3b34;
+  transform: translateY(-2px);
 }

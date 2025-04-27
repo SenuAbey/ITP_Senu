@@ -173,11 +173,11 @@ const TicketAdmin = () => {
       <div className="ticket-container">
         {sortedTickets.map((ticket) => (
           <div key={ticket._id} className={`ticket-card ${ticket.priority.toLowerCase()}`}>
-            <p><strong>Category:</strong> {ticket.category}</p>
-            <p><strong>Description:</strong> {ticket.description}</p>
-            <p><strong>Status:</strong> {ticket.status}</p>
-            <p><strong>Priority:</strong> {ticket.priority}</p>
-            <p><strong>Reply:</strong> {ticket.reply && (
+            <p style={{ textAlign: "left" }}><strong>Category:</strong> {ticket.category}</p>
+            <p style={{ textAlign: "left" }}><strong>Description:</strong> {ticket.description}</p>
+            <p style={{ textAlign: "left" }}><strong>Status:</strong> {ticket.status}</p>
+            <p style={{ textAlign: "left" }}><strong>Priority:</strong> {ticket.priority}</p>
+            <p style={{ textAlign: "left" }}><strong>Reply:</strong> {ticket.reply && (
               <div className="admin-reply">
                 <h4>Admin Reply:</h4>
                 <p>{ticket.reply}</p>
@@ -187,13 +187,21 @@ const TicketAdmin = () => {
             <select
               value={status[ticket._id] || ''}
               onChange={(e) => setStatus({ ...status, [ticket._id]: e.target.value })}
+              style={{
+                padding: '8px',
+                borderRadius: '8px',
+                border: '1px solid #ccc',
+                backgroundColor: '#f9f9f9',
+                width: '100%',
+                marginBottom: '8px'
+              }}
             >
               <option value="">Select Status</option>
               <option value="Under Review">Under Review</option>
               <option value="In Progress">In Progress</option>
               <option value="Resolved">Resolved</option>
             </select>
-            <button className="update-btn" onClick={() => handleUpdate(ticket._id)}>Update Status</button>
+            <button style={{ backgroundColor: 'gold', color: 'black' }} className="update-btn" onClick={() => handleUpdate(ticket._id)}>Update Status</button>
 
             <button className="delete-btn" onClick={() => handleDelete(ticket._id)}>Delete</button>
 
@@ -202,7 +210,7 @@ const TicketAdmin = () => {
               value={reply[ticket._id] || ''}
               onChange={(e) => handleReplyChange(ticket._id, e.target.value)}
               rows="3"
-              cols="50"
+              cols="35"
             ></textarea>
             <button className="reply-btn" onClick={() => handleReplySubmit(ticket._id, reply[ticket._id])}>Reply</button>
           </div>
