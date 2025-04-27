@@ -1,5 +1,6 @@
 /* Container and Form Layout */
-.container {
+.bookingcontainer {
+    align-items: center;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -77,7 +78,7 @@
   }
   
   .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #1a3f44;
   }
   
   /* Terms List */

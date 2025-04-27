@@ -159,7 +159,7 @@ function TicketCustomer() {
           required
         />
 
-        <button type="submit">Submit</button>
+        <button className= "download-pdf-button" type="submit">Submit</button>
       </form>
 
       <hr height="3px" />

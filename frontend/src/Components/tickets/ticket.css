@@ -49,6 +49,11 @@
   outline: none;
 }
 
+
+.download-pdf-button{
+  background-color: #1a3f44;
+
+}
 .ticketForm button {
   background-color: #1a3f44;
   color: white;
