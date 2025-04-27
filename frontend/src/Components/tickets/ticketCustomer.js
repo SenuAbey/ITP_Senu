@@ -98,9 +98,9 @@ function TicketCustomer() {
   };
 
   return (
-    <div name = "cus">
+    <div className = "cusTicket">
       <h2>Submit a Ticket</h2>
-      <form onSubmit={handleSubmit}>
+      <form className = "ticketForm" onSubmit={handleSubmit}>
         <label>Category</label>
         <select name="category" value={ticketData.category} onChange={handleInputChange} required>
           <option value="">Select Category</option>
