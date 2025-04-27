@@ -2,8 +2,7 @@ import React from "react";
 import {Route, Routes ,Navigate} from 'react-router-dom';
 import './App.css';
 import HomeVehicle from "./Components/vehicle/HomeVehicles/HomeVehicles";
-import CustomerNav from "./Components/vehicle/NavBar/Nav";
-import AdminNav from "./Components/vehicle/NavBar/AdminNav"
+import NavBar from "./Components/vehicle/NavBar/Nav";
 import AddVehicles from "./Components/vehicle/AddVehicles/AddVehicles";
 import VehicleDetails from "./Components/vehicle/VehicleDetails/VehicleDetails";
 import UpdateVehicle from "./Components/vehicle/UpdateVehicle/UpdateVehicle";
@@ -31,17 +30,16 @@ import UpdateDriver from "./Components/driver/UpdateDriver";
 import Register from './Components/driver/Register';
 import CustomerDashboard from "./Components/driver/CustomerDashboard";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 
 function App() {
-  const [setRole,userRole] = useState(() => localStorage.getItem("role"));
+  const [role, setRole] = useState(() => localStorage.getItem("role"));
   return (
     <div className="App">
       
-      {userRole === "admin" ? <AdminNav /> : <CustomerNav />}
-      {/*<NavBar/> */}
+      <NavBar/>
      
       <React.Fragment>
         <Routes>
