@@ -3,6 +3,7 @@ import "./nav.css";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
+  console.log("NavBar is being rendered");
   return (
     <div className="nav">
       <div className="left">
@@ -11,10 +12,10 @@ const Nav = () => {
         </Link>
       </div>
       <div className="right">
+      
         <Link to="/customerVehicleDetails" className="nav-link">Dashboard</Link>
         <Link to="/bookings" className="nav-link">My Bookings</Link>
         <Link to="/ticketCustomer" className="nav-link">Customer Support</Link>
-        <Link to="/driver-mgt" className="nav-link">Driver Management</Link>
       </div>
     </div>
   );

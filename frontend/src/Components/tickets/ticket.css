@@ -1,120 +1,247 @@
-/* Overall Page */
-[name="cus"] {
-  padding: 20px;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-}
-
-/* Form Styling */
-form {
-  background-color: #ffffff;
+.ticketForm {
   padding: 25px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
 
-form label {
+.ticketFormContainer {
+  width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cusTicket h2 {
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.ticketForm label {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 8px;
+  margin-top: 12px;
   display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
 }
 
-form input[type="text"],
-form select,
-form textarea {
+.ticketForm input,
+.ticketForm textarea,.ticketForm select {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  background-color: #fafafa;
   font-size: 16px;
-  transition: border-color 0.3s;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #e9f0f3;
+  margin-bottom: 7px;
 }
 
-form input[type="text"]:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #007bff;
-  background-color: #fff;
+.ticketForm input:focus,
+.ticketForm textarea:focus,
+.ticketForm select:focus{
+  border-color: #1a3f44;
   outline: none;
 }
 
-form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-form button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background-color: #28a745;
+.ticketForm button {
+  background-color: #1a3f44;
   color: white;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 12px 25px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
 }
 
-form button:hover {
-  background-color: #218838;
+.ticketForm button:hover {
+  background-color: #15514d;
+  transform: scale(1.05);
+}
+.ticketForm input[type="text"] {
+  height: 40px;
 }
 
-/* Section Divider */
-hr {
-  margin: 40px auto;
-  width: 80%;
-  border: none;
-  height: 2px;
-  background-color: #ddd;
+.ticketForm textarea {
+  height: 150px;
+  resize: none;
 }
 
-/* Ticket List */
+.cusTicket select {
+  height: 40px;
+  background-color: #e9f0f3;
+}
+
+.manage_tickets{
+  margin-left: 30px;
+
+}
+.ticket-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  margin: 30px 30px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
 .ticket-list {
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .ticket-card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: #d7e9ec;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ticket-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .ticket-card p {
-  margin: 8px 0;
-  font-size: 15px;
-  color: #555555;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
 }
 
 .ticket-card strong {
-  color: #333333;
+  color: #555;
 }
 
-/* Titles */
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333333;
+.ticket-card h3 {
+  margin: 0;
+  color: #333;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  form, .ticket-card {
-    padding: 20px;
-  }
+.manage_tickets select {
+  height: 40px;
+  background-color: #e9f0f3;
+  width: 300px; 
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.ticket-card.high {
+  background-color: #ffcccb; 
+  border-left: 5px solid red;
+}
+
+.ticket-card.medium {
+  background-color: #fff5cc; 
+  border-left: 5px solid orange;
+}
+
+.ticket-card.low {
+  background-color: #d4fcd4; 
+  border-left: 5px solid green;
+}
+
+.admin-actions button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: gold;
+  width: 100%;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;  
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+.delete-btn {
+  background-color: rgb(198, 15, 15);
+  width: 100%;  
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reply-btn {
+  background-color: rgb(28, 103, 165);
+  width: 100%;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+.update-btn:hover {
+  background-color: rgb(179, 179, 81);;
+}
+
+.delete-btn:hover {
+  background-color: rgb(223, 98, 98);
+}
+
+.reply-btn:hover {
+  background-color: rgb(69, 69, 147);
+}
+
+.ticketReply{
+  width: 100%;
+}
+.admin-reply {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.ticketPdf{
+  background-color:#15514d; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.ticketpdf-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
 }

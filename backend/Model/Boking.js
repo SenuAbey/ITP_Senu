@@ -77,5 +77,7 @@ const bookingSchema = new mongoose.Schema({
   tripStatus: {type: String,enum:['Not Started','Started','Completed'],default:'Not Started'}
 });
 
-module.exports = mongoose.model('Boking', bookingSchema);
+//module.exports = mongoose.model('Boking', bookingSchema);
+module.exports = mongoose.models.Boking || mongoose.model('Boking', bookingSchema);
+
 //define API endpoints to handle the crud and allow backend to interact with the database

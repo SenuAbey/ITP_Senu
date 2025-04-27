@@ -2,6 +2,7 @@ import React ,{useState,useEffect }from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AddVehicles.css';
+import NavBar from "../NavBar/Nav";
 
 
 const vehiclePricing = {
@@ -148,14 +149,17 @@ function AddVehicles() {
 
  
   return (
+    
     <div>
+        <NavBar/>
+
       <h1>Add vehicles</h1>
       <form className="add-vehicle-form" onSubmit={handleSubmit}>
         <label>Vehicle ID</label>
         <input type="text" name="vehicleID" onChange={handleChange} value={inputs.vehicleID} required readOnly ></input>
         <br/>
         <label>Vehicle Model</label>
-<       input type="text" name="vehicleModel" onChange={handleChange} value={inputs.vehicleModel} required></input>
+        <input type="text" name="vehicleModel" onChange={handleChange} value={inputs.vehicleModel} required></input>
         <br/>
         <label>Vehicle Type</label>
         
