@@ -3,6 +3,7 @@ import {Route, Routes ,Navigate} from 'react-router-dom';
 import './App.css';
 import HomeVehicle from "./Components/vehicle/HomeVehicles/HomeVehicles";
 import NavBar from "./Components/vehicle/NavBar/Nav";
+import AdminNavBar from "./Components/vehicle/NavBar/AdminNav.js";
 import AddVehicles from "./Components/vehicle/AddVehicles/AddVehicles";
 import VehicleDetails from "./Components/vehicle/VehicleDetails/VehicleDetails";
 import UpdateVehicle from "./Components/vehicle/UpdateVehicle/UpdateVehicle";
@@ -36,11 +37,28 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [role, setRole] = useState(() => localStorage.getItem("role"));
+  useEffect(() => {
+    // You can retrieve the role from localStorage if it's already stored from login
+    if (role) {
+      localStorage.setItem("role", role);
+    }
+  }, [role]);
+
+  // Conditionally render NavBar or AdminNavBar based on the role
+  const renderNavBar = () => {
+    if (role === "ADMIN") {
+      return <AdminNavBar />;
+    }
+    return <NavBar />;
+  };
   return (
     <div className="App">
       
-      <NavBar/>
-     
+      
+     {/* Render NavBar or AdminNavBar based on role */}
+     {renderNavBar()}
+
+
       <React.Fragment>
         <Routes>
           

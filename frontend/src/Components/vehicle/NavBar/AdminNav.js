@@ -16,7 +16,7 @@ const Nav = () => {
         <Link to="/VehicleDetails" className="nav-link">Dashboard</Link>
         <Link to="/bookings" className="nav-link">Booking Details</Link>
         <Link to="/ticketAdmin" className="nav-link">Customer Tickets</Link>
-        <Link to="" className="nav-link">Driver Management</Link>
+        <Link to="/admin-dashboard" className="nav-link">Driver Management</Link>
       </div>
     </div>
   );

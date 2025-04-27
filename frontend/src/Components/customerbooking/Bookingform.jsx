@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import axios from "axios";
 import './bookingForm.css';
 
@@ -21,15 +21,17 @@ const Bookingform = () => {
 
   const [errors, setErrors] = useState({});
 
-  const vehicles = {
+  // Memoize vehicles to avoid unnecessary re-creations on each render
+  const vehicles = useMemo(() => ({
     Car: { vehiclePriceHour: 2000, vehiclePriceDay: 20000 },
     Van: { vehiclePriceHour: 2500, vehiclePriceDay: 25000 },
     Lorry: { vehiclePriceHour: 3500, vehiclePriceDay: 35000 },
     "Motor Bicycle": { vehiclePriceHour: 1000, vehiclePriceDay: 10000 },
     "Hyper Bicycle": { vehiclePriceHour: 3000, vehiclePriceDay: 35000 },
-  };
+  }), []);
 
-  const calculateTotalAmount = (vehicleType, durationType, durationValue, needsDriver) => {
+  // Memoized function to calculate total amount
+  const calculateTotalAmount = useCallback((vehicleType, durationType, durationValue, needsDriver) => {
     const vehicle = vehicles[vehicleType];
     let basePrice = 0;
 
@@ -53,7 +55,7 @@ const Bookingform = () => {
     }
 
     return basePrice + driverCost;
-  };
+  }, [vehicles]);
 
   useEffect(() => {
     const totalAmount = calculateTotalAmount(
@@ -68,7 +70,7 @@ const Bookingform = () => {
     formData.rentalDuration.type,
     formData.rentalDuration.value,
     formData.needsDriver,
-    calculateTotalAmount,  // Added here to fix the warning
+    calculateTotalAmount,  // Memoized callback
   ]);
 
   const handleChange = (e) => {
