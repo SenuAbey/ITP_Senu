@@ -46,7 +46,7 @@ const Navbar = () => {
     <div className="top-bar">
       {/* Logo Section */}
       <div className="logo">
-        <NavLink to="/" className="logo-link">Driver Dashboard</NavLink>
+        <NavLink to="/" className="logo-link">Vehicle Rental Services</NavLink>
       </div>
 
       {/* Navigation / User Profile Section */}

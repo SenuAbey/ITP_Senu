@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import DriverSidebar from "./DriverSidebar";
-import DriverNavbar from "./DriverNavbar";
+//import DriverNavbar from "./DriverNavbar";
 import "./DriverDashboard.css";
 
 const DriverDashboard = () => {
   const [driverData, setDriverData] = useState(null);
-  const [assignedBookings, setAssignedBookings] = useState([]);
+  //const [assignedBookings, setAssignedBookings] = useState([]);
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const DriverDashboard = () => {
     };
 
     // Fetch assigned bookings
-    const fetchAssignedBookings = async () => {
+    /*const fetchAssignedBookings = async () => {
       try {
         console.log("Fetching assigned bookings for Driver: %s", username);
         const response = await axios.get(`http://localhost:8070/bokings/driver-bookings/${username}`, {
@@ -51,7 +51,7 @@ const DriverDashboard = () => {
       } catch (error) {
         console.error("Error fetching assigned bookings:", error);
       }
-    };
+    };*/
 
     const fetchTripCounts = async () => {
       try {
@@ -73,7 +73,7 @@ const DriverDashboard = () => {
     // Fetch both driver data and assigned bookings
     if (username && token) {
       fetchDriverData();
-      fetchAssignedBookings();
+      //fetchAssignedBookings();
       fetchTripCounts();
     }
   }, [username, token]);
@@ -123,7 +123,8 @@ const DriverDashboard = () => {
             <p><strong>First Name:</strong> {driverData.firstName}</p>
             <p><strong>Last Name:</strong> {driverData.lastName}</p>
             <p><strong>NIC:</strong> {driverData.NIC}</p>
-            <p><strong>Date Of Birth:</strong> {driverData.dob}</p>
+            
+            <p><strong>Date Of Birth:</strong> {new Date(driverData.dob).toLocaleDateString()}</p>
             <p><strong>Gender:</strong> {driverData.gender}</p>
             <p><strong>Contact Number:</strong> {driverData.contactNumber}</p>
             <p><strong>Email:</strong> {driverData.email}</p>
